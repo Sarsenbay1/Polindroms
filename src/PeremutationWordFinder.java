@@ -25,6 +25,7 @@ public class PeremutationWordFinder implements IWordFinder {
                         permutations.put(_words[i], _words[j]);
                     }
                 }
+
             }
         }
         return permutations;
@@ -32,7 +33,7 @@ public class PeremutationWordFinder implements IWordFinder {
 
     protected String[] textFormatting(String _text) {
         _text = _text.toLowerCase();
-        String[] _words = _text.replaceAll("[.,!:;%&?#%$]", "").split(" ");//
+        String[] _words = _text.replaceAll("[.,!:;%&?#$]", "").split(" ");//
         System.out.println("");
         return _words;
     }

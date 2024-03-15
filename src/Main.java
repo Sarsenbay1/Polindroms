@@ -7,7 +7,7 @@ public class Main {
         Scanner _inputConsole = new Scanner(System.in);
 
         do {
-            System.out.println("Please select what to do\n1)removing permutation words\n2)Find polindrome");
+            System.out.println("Please select what to do\n1)removing permutation words\n2)Find polyndrome");
             _numberMethod = _inputConsole.nextInt();
             _inputConsole.nextLine();
 
