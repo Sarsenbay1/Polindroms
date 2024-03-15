@@ -24,18 +24,15 @@ public class Main {
             }
 
             case 2: {
-                PolydromeFinder _polydromeFinder = new PolydromeFinder();
+                PolyndromeFinder _polydromeFinder = new PolyndromeFinder();
                 String[] _polindroms = _polydromeFinder.findPolydrome(_text);
-                System.out.println("Polindroms");
+                System.out.println("Polindroms:");
                 for (String _polindrom : _polindroms) {
-
                     System.out.printf(_polindrom + "\n");
                 }
                 break;
             }
 
-            default:
-                break;
         }
         _inputConsole.close();
 
