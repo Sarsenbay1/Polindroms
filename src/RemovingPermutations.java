@@ -1,7 +1,7 @@
 
 import java.util.HashMap;
 
-public class RemovingPermutations extends PolyndromeFinder {
+public class RemovingPermutations extends PolindromeFinder {
     public String removingPermutedWords(String _defaultText) {
         HashMap<String, String> _permutedWords = this.searchPermutedWords(_defaultText);// Map слов перестановок
 

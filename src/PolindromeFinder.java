@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-public class PolyndromeFinder extends PeremutationWordFinder {
+public class PolindromeFinder extends PeremutationWordFinder {
     public String[] findPolydrome(String _defaultText) {
         String[] _words = this.textFormatting(_defaultText);
 
         ArrayList<String> _polyndromeWords = new ArrayList<String>();
 
         for (String _word : _words) {
-            if (isPolyndrome(_word) && !_polyndromeWords.contains(_word)) { // Проверка слова на палиндром
+            if (isPolyndrome(_word) && !_polyndromeWords.contains(_word)) { // Проверка слова на пoлиндром
                 _polyndromeWords.add(_word);
             }
         }

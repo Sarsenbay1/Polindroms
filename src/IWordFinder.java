@@ -1,7 +1,5 @@
-//package com.example;
-
-import java.util.Map;
+import java.util.HashMap;
 
 public interface IWordFinder {
-    Map<String, String> searchPermutedWords(String _text);
+    HashMap<String, String> searchPermutedWords(String _text);
 }

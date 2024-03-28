@@ -7,7 +7,7 @@ public class Main {
         Scanner _inputConsole = new Scanner(System.in);
 
         do {
-            System.out.println("Please select what to do\n1)removing permutation words\n2)Find polyndrome");
+            System.out.println("Please select what to do\n1)removing permutation words\n2)Find polindrome");
             _numberMethod = _inputConsole.nextInt();
             _inputConsole.nextLine();
 
@@ -24,7 +24,7 @@ public class Main {
             }
 
             case 2: {
-                PolyndromeFinder _polydromeFinder = new PolyndromeFinder();
+                PolindromeFinder _polydromeFinder = new PolindromeFinder();
                 String[] _polindroms = _polydromeFinder.findPolydrome(_text);
                 System.out.println("Polindroms:");
                 for (String _polindrom : _polindroms) {

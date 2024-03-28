@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class PeremutationWordFinder implements IWordFinder {
@@ -10,16 +11,21 @@ public class PeremutationWordFinder implements IWordFinder {
 
         // Поиск перестановок слов
         for (Integer i = 0; i < _words.length; i++) {
-            for (Integer j = 0; j < _words.length; j++) {
+            for (Integer j = i + 1; j < _words.length; j++) {
                 if (i != j) {
+                    char[] _word1 = _words[i].toCharArray();
+                    char[] _word2 = _words[j].toCharArray();
 
+                    Arrays.sort(_word1);
+                    Arrays.sort(_word2);
                     // Map, то добавляем пару в Map
                     // System.out.println(_word1 + " " + _word2);
-                    if (_words[i].equals(new StringBuilder(_words[j]).reverse().toString())
-                            && !_permutations.containsKey(_words[i])
-                            && !_permutations.containsValue(_words[i])) {
+                    if (Arrays.equals(_word1, _word2) && !_permutations.containsKey(_words[i])
+                            && !_permutations.containsValue(_words[i]) && !_words[i].equals(_words[j])) {
                         _permutations.put(_words[i], _words[j]);
+                        // System.out.println(_words[i] + "----" + _words[j]);
                     }
+
                 }
 
             }
@@ -30,7 +36,7 @@ public class PeremutationWordFinder implements IWordFinder {
     protected String[] textFormatting(String _text) {
         _text = _text.toLowerCase();
         String[] _words = _text.replaceAll("[.,!:;%&?#$]", "").split(" ");//
-        System.out.println("");
+        // System.out.println("");
         return _words;
     }
 }
