@@ -2,8 +2,10 @@
 import java.util.HashMap;
 
 public class RemovingPermutations extends PolindromeFinder {
-    public String removingPermutedWords(String _defaultText) {
-        HashMap<String, String> _permutedWords = this.searchPermutedWords(_defaultText);// Map слов перестановок
+
+    @Override
+    public String permutedWords(String _defaultText) {
+        HashMap<String, String> _permutedWords = searchPermutedWords(_defaultText);// Map слов перестановок
 
         String result = "";
         String[] words = _defaultText.split(" ");

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class PolindromeFinder extends PeremutationWordFinder {
     public String[] findPolydrome(String _defaultText) {
-        String[] _words = this.textFormatting(_defaultText);
+        String[] _words = textFormatting(_defaultText);
 
         ArrayList<String> _polyndromeWords = new ArrayList<String>();
 
@@ -16,7 +16,7 @@ public class PolindromeFinder extends PeremutationWordFinder {
 
     }
 
-    private static boolean isPolyndrome(String _word) {
+    private boolean isPolyndrome(String _word) {
         return _word.equals(new StringBuilder(_word).reverse().toString()); // Проверка на полиндром
 
     }
